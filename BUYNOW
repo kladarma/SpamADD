@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1997 ERROR</title>
+    <style>
+        /* Настройки фона и шрифта всего сайта */
+        body {
+            font-family: "Courier New", Courier, monospace; /* Ретро-шрифт */
+            text-align: center;
+            background-color: #000000; /* Черный фон */
+            color: #ffffff;
+            padding: 50px 20px;
+        }
+
+        /* Заголовок "1997 ERROR" */
+        .error-title {
+            font-size: 54px;
+            font-weight: bold;
+            color: #ffffff; 
+            text-shadow: 2px 2px #ff00ff; /* Розовая тень */
+            margin-bottom: 25px;
+        }
+
+        /* Текст поменьше темно-розового цвета */
+        .error-subtitle {
+            font-size: 22px;
+            color: #C71585; 
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Описание */
+        .error-description {
+            font-size: 22px;
+            color: #C71585; 
+            margin-bottom: 35px;
+            font-weight: bold;
+        }
+
+        /* Кнопка */
+        .btn-telegram {
+            display: inline-block;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: #000000; /* Черный фон кнопки */
+            padding: 15px 40px;
+            text-decoration: none;
+            border: 4px solid #ff00ff; /* Розовая рамка */
+            border-radius: 0px; /* Квадратная кнопка */
+            box-shadow: 5px 5px 0px #ffffff; /* Белая тень кнопки */
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent; /* Убирает синее выделение при тапе на смартфонах */
+            
+            /* Анимация плавного изменения цвета текста */
+            animation: spamtonTextColor 4s infinite linear;
+        }
+
+        /* Эффект при наведении (для ПК) */
+        .btn-telegram:hover {
+            border-color: #ffde00;
+            box-shadow: 2px 2px 0px #ffffff;
+        }
+
+        /* Правила анимации перелива текста */
+        @keyframes spamtonTextColor {
+            0%   { color: #ffde00; } /* Ярко-желтый */
+            25%  { color: #ff00ff; } /* Розовый */
+            50%  { color: #00ffcc; } /* Бирюзово-зеленый */
+            75%  { color: #ffffff; } /* Белый */
+            100% { color: #ffde00; } /* Снова желтый */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Главный заголовок -->
+    <div class="error-title">1997 ERROR</div>
+    
+    <!-- Текст темно-розового цвета -->
+    <div class="error-subtitle">Гиперссылка сайта устарела или недействительна</div>
+    
+    <!-- Описание -->
+    <div class="error-description">Чтобы получить [[СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ]], нажмите на кнопку ниже —&gt;</div>
+    
+    <!-- Стандартная веб-ссылка, которая отлично распознается всеми телефонами -->
+    <a href="https://t.me" class="btn-telegram" onclick="playSound()">НАЖМИ СЮДА</a>
+
+    <!-- Скрытый аудиоэлемент со звуком взрыва Deltarune -->
+    <audio id="click-sound" src="https://myinstants.com" preload="auto"></audio>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById('click-sound');
+            if (audio) {
+                audio.currentTime = 0;
+                audio.play();
+            }
+            // Мы убрали event.preventDefault(). 
+            // Теперь браузер одновременно включит звук и сразу начнет открывать Telegram.
+        }
+    </script>
+
+</body>
+</html>
